@@ -12,7 +12,6 @@ crispy-bootstrap5
 distlib
 Django
 django-appconf
-django-bootstrap-v5
 django-browser-reload
 django-compressor
 django-crispy-forms
