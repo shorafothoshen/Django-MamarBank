@@ -8,11 +8,15 @@ charset-normalizer
 click
 colorama
 cookiecutter
+crispy-bootstrap5
 distlib
+dj-database-url
 Django
 django-appconf
+django-bootstrap-v5
 django-browser-reload
 django-compressor
+django-crispy-forms
 django-environ
 django-tailwind
 django-tailwindcss
@@ -31,6 +35,7 @@ pillow
 pipenv
 platformdirs
 psycopg2
+psycopg2-binary
 PyAutoGUI
 PyGetWindow
 Pygments
@@ -53,6 +58,7 @@ soupsieve
 sqlparse
 text-unidecode
 types-python-dateutil
+typing_extensions
 tzdata
 urllib3
 virtualenv
