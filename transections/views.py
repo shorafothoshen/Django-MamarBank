@@ -63,7 +63,7 @@ class DepositMoneyView(TransactionsMoneyView):
                 'balance'
             ]
         )
-        messages.success(self.request, f"{"{:,.2f}".format(float(amount))} $ was deposited to your account succussfully")
+        messages.success(self.request, f"{float(amount):,.2f} $ was deposited to your account succussfully")
         send_transaction_email("Deposti Message","transaction/deposit_email.html",self.request.user,amount)
         return super().form_valid(form)
     
@@ -88,7 +88,7 @@ class WithdrawMoneyView(TransactionsMoneyView):
                     'balance'
                 ]
             )
-            messages.success(self.request, f"Successfully Withdrawn {"{:,.2f}".format(float(amount))} $ from your account.")
+            messages.success(self.request, f"Successfully Withdrawn {float(amount):,.2f} $ from your account.")
             send_transaction_email("Withdrawal Message","transaction/withdraw_email.html",self.request.user,amount)
         return super().form_valid(form)
     
@@ -106,7 +106,7 @@ class LoanRequestView(TransactionsMoneyView):
 
         if current_loan_count>=3:
             return HttpResponse("You Have Crossed the Limits")
-        messages.success(self.request, f"Loan Request for amount {"{:,.2f}".format(float(amount))} $ has been successfully sent to admin.")
+        messages.success(self.request, f"Loan Request for amount {float(amount):,.2f} $ has been successfully sent to admin.")
 
         send_transaction_email("Loan Request Message","transaction/loan_email.html",self.request.user,amount)
         return super().form_valid(form)

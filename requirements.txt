@@ -8,14 +8,11 @@ charset-normalizer
 click
 colorama
 cookiecutter
-crispy-bootstrap5
 distlib
 Django
 django-appconf
-django-bootstrap-v5
 django-browser-reload
 django-compressor
-django-crispy-forms
 django-environ
 django-tailwind
 django-tailwindcss
