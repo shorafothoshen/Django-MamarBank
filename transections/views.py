@@ -205,6 +205,7 @@ class BalanceTransferView(LoginRequiredMixin,View):
                             transaction_type=RECEIVE
                         )
                         send_transaction_email("Balance Transfer Message","transaction/transfer_email.html",request.user,amount)
+                        send_transaction_email("Balance Receive Message","transaction/Receive_email.html",sending_user.user,amount)
                     else:
                         messages.error(request,"Not enough money in your account ❌")
                     return redirect("transaction_report")
